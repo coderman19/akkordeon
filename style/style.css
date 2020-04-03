@@ -1,0 +1,86 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #000;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+/* faq */
+
+.faq {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.faq-item {
+    border: 1px solid #b91122;
+    margin-bottom: 5px;
+}
+
+.faq-title {
+    position: relative;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background .3s ease-out;
+    font-weight: 500;
+}
+
+.faq-title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent 
+    transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%);
+}
+
+.faq-title:hover {
+    background-color: #b91122;
+}
+
+.faq-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.faq-input:checked ~ .faq-title {
+    background-color: #b91122;
+}
+
+.faq-input:checked ~ .faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.faq-input:checked ~ .faq-text {
+    display: block;
+}
+
+.faq-text {
+    display: none;            /* скрываем текст */
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
